@@ -11,5 +11,5 @@ package bankadapter;
  * @author naty9
  */
 public interface IBankAdapter <T>{
-    public T sendCreditRequest(); 
+    public T sendCreditRequest(BankCreditRequest r); 
 }

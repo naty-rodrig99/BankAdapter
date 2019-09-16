@@ -12,12 +12,12 @@ package bankadapter;
  */
 public class XBankCreditAPI {
     
-    public XBankCreditResponse sendCreditRequest(XBankCreditRequest request){
-        XBankCreditResponse response = new XBankCreditResponse();
+    public BankCreditResponse sendCreditRequest(BankCreditRequest request){
+        BankCreditResponse response = new BankCreditResponse();
         if(request.getRequestAmount() <= 5000){
-            response.setAproval(true);
+            response.setApproval(true);
         }else{
-            response.setAproval(false);
+            response.setApproval(false);
         }
         return response;
     }

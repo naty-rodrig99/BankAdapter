@@ -10,7 +10,7 @@ package bankadapter;
  *
  * @author naty9
  */
-public class XBankCreditRequest {
+public class BankCreditRequest {
     private String customerName;
     private double requestAmount;
     

@@ -12,22 +12,17 @@ package bankadapter;
  */
 public class XBankCreditAdapter implements IBankAdapter {
 
-    public XBankCreditResponse sendCreditRequest(XBankCreditRequest request) {
-        XBankCreditRequest xrequest = new XBankCreditRequest();
+    public BankCreditResponse sendCreditRequest(BankCreditRequest request) {
+        BankCreditRequest xrequest = new BankCreditRequest();
         xrequest.setCustomerName(request.getCustomerName());
         xrequest.setRequestAmount(request.getRequestAmount());
         
         XBankCreditAPI api = new XBankCreditAPI();
-        XBankCreditResponse xresponse = api.sendCreditRequest(xrequest);
+        BankCreditResponse xresponse = api.sendCreditRequest(xrequest);
         
-        XBankCreditResponse response = new XBankCreditResponse();
-        response.setAproval(true);
+        BankCreditResponse response = new BankCreditResponse();
+        response.setApproval(xresponse.getApproval());
         return response;
-    }
-
-    @Override
-    public Object sendCreditRequest() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

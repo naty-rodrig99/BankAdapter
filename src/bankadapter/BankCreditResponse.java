@@ -10,15 +10,15 @@ package bankadapter;
  *
  * @author naty9
  */
-public class XBankCreditResponse {
-    public boolean aproval;
+public class BankCreditResponse {
+    public boolean approval;
     
-    public boolean getAproval() {
-        return aproval;
+    public boolean getApproval() {
+        return approval;
     }
     
-    public void setAproval(boolean aproval) {
-        this.aproval = aproval;
+    public void setApproval(boolean approval) {
+        this.approval = approval;
     }
 
 }
